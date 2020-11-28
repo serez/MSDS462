@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main_vc" id="BYZ-38-t0r" customClass="ViewController" customModule="ExpirationDateMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHY-87-ed4">
+                                <rect key="frame" x="55" y="803" width="305" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Product"/>
+                                <connections>
+                                    <segue destination="IYc-5r-Otl" kind="presentation" id="OvR-cL-Y9E"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-ns-30r">
+                                <rect key="frame" x="20" y="44" width="374" height="751"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="productTable" destination="gUS-ns-30r" id="0TN-J8-oic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="93.75"/>
+        </scene>
+        <!--Vision View Controller-->
+        <scene sceneID="uc7-sy-eoU">
+            <objects>
+                <viewController storyboardIdentifier="Expiration_Date_vc" id="IYc-5r-Otl" customClass="VisionViewController" customModule="ExpirationDateMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vlu-uz-8uR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiB-ak-g5P" customClass="PreviewView" customModule="ExpirationDateMonitor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-58" width="414" height="800"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OS1-kA-jHI">
+                                <rect key="frame" x="0.0" y="-58" width="414" height="800"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-sV-RXY">
+                                <rect key="frame" x="140.5" y="404.5" width="133" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText">
+                                    <fragment content="000111222">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0090114886978069093" green="0.0096699822809278579" blue="0.0090179522532583961" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="30"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PIr-XL-m9g" appends="YES" id="IkA-M6-DfN"/>
+                                </connections>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-Eu-jHO">
+                                <rect key="frame" x="70" y="750" width="70" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="IYc-5r-Otl" eventType="touchUpInside" id="ejT-sO-5Md"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="xBf-kl-MVm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-k0-OAm">
+                                <rect key="frame" x="285" y="750" width="70" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNext:" destination="IYc-5r-Otl" eventType="touchUpInside" id="NDU-6d-Q2Y"/>
+                                    <segue destination="SOM-SZ-MN3" kind="presentation" id="hq5-gs-STR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SVx-7d-SDj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SiB-ak-g5P" firstAttribute="top" secondItem="vlu-uz-8uR" secondAttribute="topMargin" constant="-58" id="ID4-VT-QJ8"/>
+                            <constraint firstItem="SiB-ak-g5P" firstAttribute="centerX" secondItem="vlu-uz-8uR" secondAttribute="centerX" id="Is3-qq-Nj2"/>
+                            <constraint firstItem="SiB-ak-g5P" firstAttribute="leading" secondItem="OS1-kA-jHI" secondAttribute="leading" id="JFa-jg-25S"/>
+                            <constraint firstItem="OS1-kA-jHI" firstAttribute="centerX" secondItem="vlu-uz-8uR" secondAttribute="centerX" id="L4v-Ea-xCs"/>
+                            <constraint firstItem="OS1-kA-jHI" firstAttribute="centerY" secondItem="vlu-uz-8uR" secondAttribute="centerY" id="OeX-7G-7UW"/>
+                            <constraint firstItem="SiB-ak-g5P" firstAttribute="top" secondItem="OS1-kA-jHI" secondAttribute="top" id="PVi-sx-iSZ"/>
+                            <constraint firstItem="VaU-sV-RXY" firstAttribute="centerY" secondItem="vlu-uz-8uR" secondAttribute="centerY" id="bzG-Bs-aey"/>
+                            <constraint firstItem="SiB-ak-g5P" firstAttribute="leading" secondItem="SVx-7d-SDj" secondAttribute="leading" id="mGW-Hi-O3k"/>
+                            <constraint firstItem="SiB-ak-g5P" firstAttribute="centerY" secondItem="vlu-uz-8uR" secondAttribute="centerY" id="o54-r6-Hkq"/>
+                            <constraint firstItem="VaU-sV-RXY" firstAttribute="centerX" secondItem="vlu-uz-8uR" secondAttribute="centerX" id="v3Z-Gz-u5c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eYx-mD-ndl"/>
+                    <connections>
+                        <outlet property="cutoutView" destination="OS1-kA-jHI" id="LQF-Sm-OMS"/>
+                        <outlet property="dateView" destination="VaU-sV-RXY" id="vQJ-7W-1T9"/>
+                        <outlet property="previewView" destination="SiB-ak-g5P" id="LPP-18-Shb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8H-Yx-zaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PIr-XL-m9g"/>
+            </objects>
+            <point key="canvasLocation" x="1295.6521739130435" y="113.83928571428571"/>
+        </scene>
+        <!--Barcode View Controller-->
+        <scene sceneID="Scc-UV-qet">
+            <objects>
+                <viewController storyboardIdentifier="Barcode_vc" id="SOM-SZ-MN3" customClass="BarcodeViewController" customModule="ExpirationDateMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uoa-Bm-dTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5M-Ye-cIX">
+                                <rect key="frame" x="36" y="756" width="79" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="SOM-SZ-MN3" eventType="touchUpInside" id="EA9-DC-SuD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JmK-mO-hRV"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIA-JR-H4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131.8840579710145" y="160.71428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
