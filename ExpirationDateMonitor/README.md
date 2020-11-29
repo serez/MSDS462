@@ -4,7 +4,7 @@
 
 People buy groceries with a range of expiration dates. The food is stored in the refrigerator or pantry and are often forgotten until after they had expired. Once expired, the food is thrown to the garbage. This causes an enormous amount of food waste and can make an unnecessary dent in a familys’ budget.
 
- ##Project solution 
+ ## Project solution 
  
 One solution to save money and avoid food waste is to use an edge-based device, in this case an iPhone app, that warns people as food expires, providing an opportunity to consume the food before expiration. The app needs to be user friendly and able store data in a quick manner. The Expiration Date Monitor uses computer vision capabilities to identify expiration dates using text detection, and barcode decoding to identify product names and store data quick and seamlessly. As an add-on, once the data is stored, the user is notified before a specific food is about to expire, reminding the user to consume the food before it is too late.
 
