@@ -23,9 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let cellReuseIdentifier = "cell"
     
-    let isDemo = true
+    let isDemo = false
         
-    var db:DBHelper = DBHelper(isDemo: true)
+    var db:DBHelper = DBHelper(isDemo: false)
         
     var products:[Product] = []
     
@@ -50,18 +50,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             addProductInfo(name: "Cottage cheese", expirationDate: date!)
            
             
-            stringDate = "2020-11-23"
+            stringDate = "2020-11-28"
             date = dateFormatter.date(from: stringDate)
             addProductInfo(name: "Eggs", expirationDate: date!)
            
             
             
-            stringDate = "2020-11-21"
+            stringDate = "2020-11-29"
             date = dateFormatter.date(from: stringDate)
             addProductInfo(name: "Milk", expirationDate: date!)
             
             
-            stringDate = "2020-11-22"
+            stringDate = "2020-11-30"
             date = dateFormatter.date(from: stringDate)
             addProductInfo(name: "Chicken", expirationDate: date!)
             
